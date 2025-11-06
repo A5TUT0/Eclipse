@@ -58,8 +58,14 @@ try {
   for (const [key, value] of Object.entries(
     updatedMaterial.iconDefinitions || {}
   )) {
-    if (value.iconPath && value.iconPath.startsWith("../icons/")) {
-      value.iconPath = value.iconPath.replace("../icons/", "./icons-material/");
+    if (value.iconPath) {
+      // Handle both ../icons/ and ./../icons/ formats
+      if (value.iconPath.includes("../icons/")) {
+        value.iconPath = value.iconPath.replace(
+          /\.?\.\/?\.\.\/icons\//g,
+          "./icons-material/"
+        );
+      }
     }
   }
 
