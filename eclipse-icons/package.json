@@ -1,0 +1,42 @@
+{
+  "name": "eclipse-icons",
+  "displayName": "Eclipse Icons",
+  "description": "A beautiful icon theme for VS Code with modern, vibrant icons for files and folders",
+  "version": "0.0.1",
+  "publisher": "NoahLezama",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "icons",
+    "icon theme",
+    "file icons",
+    "folder icons",
+    "eclipse",
+    "material icons",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A5TUT0/eclipse-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/A5TUT0/eclipse-icons/issues"
+  },
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "eclipse-icons",
+        "label": "Eclipse Icons",
+        "path": "./iconTheme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  }
+}

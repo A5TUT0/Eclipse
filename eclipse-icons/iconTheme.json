@@ -1,0 +1,133 @@
+{
+  "iconDefinitions": {
+    "_file": {
+      "iconPath": "./icons/file/file.svg"
+    },
+    "_folder": {
+      "iconPath": "./icons/folder/folder.svg"
+    },
+    "_folder_open": {
+      "iconPath": "./icons/folder/folder-open.svg"
+    },
+    "_root_folder": {
+      "iconPath": "./icons/folder/folder-root.svg"
+    },
+    "_root_folder_open": {
+      "iconPath": "./icons/folder/folder-root-open.svg"
+    },
+    "_javascript": {
+      "iconPath": "./icons/file/javascript.svg"
+    },
+    "_typescript": {
+      "iconPath": "./icons/file/typescript.svg"
+    },
+    "_python": {
+      "iconPath": "./icons/file/python.svg"
+    },
+    "_java": {
+      "iconPath": "./icons/file/java.svg"
+    },
+    "_html": {
+      "iconPath": "./icons/file/html.svg"
+    },
+    "_css": {
+      "iconPath": "./icons/file/css.svg"
+    },
+    "_json": {
+      "iconPath": "./icons/file/json.svg"
+    },
+    "_markdown": {
+      "iconPath": "./icons/file/markdown.svg"
+    },
+    "_git": {
+      "iconPath": "./icons/file/git.svg"
+    },
+    "_npm": {
+      "iconPath": "./icons/file/npm.svg"
+    },
+    "_react": {
+      "iconPath": "./icons/file/react.svg"
+    },
+    "_vue": {
+      "iconPath": "./icons/file/vue.svg"
+    },
+    "_folder_src": {
+      "iconPath": "./icons/folder/folder-src.svg"
+    },
+    "_folder_src_open": {
+      "iconPath": "./icons/folder/folder-src-open.svg"
+    },
+    "_folder_node": {
+      "iconPath": "./icons/folder/folder-node.svg"
+    },
+    "_folder_node_open": {
+      "iconPath": "./icons/folder/folder-node-open.svg"
+    },
+    "_folder_git": {
+      "iconPath": "./icons/folder/folder-git.svg"
+    },
+    "_folder_git_open": {
+      "iconPath": "./icons/folder/folder-git-open.svg"
+    },
+    "_folder_vscode": {
+      "iconPath": "./icons/folder/folder-vscode.svg"
+    },
+    "_folder_vscode_open": {
+      "iconPath": "./icons/folder/folder-vscode-open.svg"
+    }
+  },
+  "file": "_file",
+  "folder": "_folder",
+  "folderExpanded": "_folder_open",
+  "rootFolder": "_root_folder",
+  "rootFolderExpanded": "_root_folder_open",
+  "fileExtensions": {
+    "js": "_javascript",
+    "mjs": "_javascript",
+    "cjs": "_javascript",
+    "ts": "_typescript",
+    "tsx": "_typescript",
+    "jsx": "_react",
+    "py": "_python",
+    "java": "_java",
+    "html": "_html",
+    "htm": "_html",
+    "css": "_css",
+    "scss": "_css",
+    "sass": "_css",
+    "json": "_json",
+    "md": "_markdown",
+    "vue": "_vue"
+  },
+  "fileNames": {
+    ".gitignore": "_git",
+    ".gitattributes": "_git",
+    "package.json": "_npm",
+    "package-lock.json": "_npm"
+  },
+  "folderNames": {
+    "src": "_folder_src",
+    "source": "_folder_src",
+    "node_modules": "_folder_node",
+    ".git": "_folder_git",
+    ".vscode": "_folder_vscode"
+  },
+  "folderNamesExpanded": {
+    "src": "_folder_src_open",
+    "source": "_folder_src_open",
+    "node_modules": "_folder_node_open",
+    ".git": "_folder_git_open",
+    ".vscode": "_folder_vscode_open"
+  },
+  "languageIds": {
+    "javascript": "_javascript",
+    "typescript": "_typescript",
+    "python": "_python",
+    "java": "_java",
+    "html": "_html",
+    "css": "_css",
+    "json": "_json",
+    "markdown": "_markdown"
+  },
+  "hidesExplorerArrows": false
+}

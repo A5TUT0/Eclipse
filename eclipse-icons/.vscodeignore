@@ -1,0 +1,11 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+.yarnrc
+**/.eslintrc.json
+**/*.map
+**/*.ts
+**/.DS_Store
+**/*.log
+test/**
+*.vsix
