@@ -3,15 +3,18 @@
 const fs = require("fs");
 const path = require("path");
 
-// Paths
-const catppuccinExtPath = path.join(
+// Paths for Material Icon Theme
+const materialExtPath = path.join(
   process.env.HOME,
-  ".vscode/extensions/catppuccin.catppuccin-vsc-icons-1.26.0"
+  ".vscode/extensions/pkief.material-icon-theme-5.28.0"
 );
-const catppuccinPath = path.join(catppuccinExtPath, "dist/mocha/theme.json");
-const catppuccinIconsPath = path.join(catppuccinExtPath, "dist/mocha/icons");
+const materialThemePath = path.join(
+  materialExtPath,
+  "dist/material-icons.json"
+);
+const materialIconsPath = path.join(materialExtPath, "icons");
 const eclipsePath = path.join(__dirname, "iconTheme-custom.json");
-const outputIconsPath = path.join(__dirname, "icons-catppuccin");
+const outputIconsPath = path.join(__dirname, "icons-material");
 
 // Helper to copy directory recursively
 function copyDir(src, dest) {
@@ -34,56 +37,53 @@ function copyDir(src, dest) {
 }
 
 try {
-  console.log("📦 Copying Catppuccin icons...");
+  console.log("📦 Copying Material Icon Theme icons...");
 
-  // Copy all Catppuccin icons
-  if (fs.existsSync(catppuccinIconsPath)) {
-    copyDir(catppuccinIconsPath, outputIconsPath);
-    console.log(`✅ Copied Catppuccin icons to ${outputIconsPath}`);
+  // Copy all Material icons
+  if (fs.existsSync(materialIconsPath)) {
+    copyDir(materialIconsPath, outputIconsPath);
+    console.log("✅ Copied Material icons to " + outputIconsPath);
   } else {
-    console.error(`❌ Catppuccin icons not found at ${catppuccinIconsPath}`);
+    console.error("❌ Material icons not found at " + materialIconsPath);
     process.exit(1);
   }
 
   console.log("🔧 Merging themes...");
 
-  const catppuccin = JSON.parse(fs.readFileSync(catppuccinPath, "utf8"));
+  const material = JSON.parse(fs.readFileSync(materialThemePath, "utf8"));
   const eclipse = JSON.parse(fs.readFileSync(eclipsePath, "utf8"));
 
-  // Update Catppuccin icon paths to point to our copied icons
-  const updatedCatppuccin = { ...catppuccin };
+  // Update Material icon paths to point to our copied icons
+  const updatedMaterial = { ...material };
   for (const [key, value] of Object.entries(
-    updatedCatppuccin.iconDefinitions
+    updatedMaterial.iconDefinitions || {}
   )) {
-    if (value.iconPath && value.iconPath.startsWith("./icons/")) {
-      value.iconPath = value.iconPath.replace(
-        "./icons/",
-        "./icons-catppuccin/"
-      );
+    if (value.iconPath && value.iconPath.startsWith("../icons/")) {
+      value.iconPath = value.iconPath.replace("../icons/", "./icons-material/");
     }
   }
 
-  // Merge: Catppuccin base + Eclipse overrides
+  // Merge: Material base + Eclipse overrides
   const merged = {
-    ...updatedCatppuccin,
+    ...updatedMaterial,
     iconDefinitions: {
-      ...updatedCatppuccin.iconDefinitions,
+      ...updatedMaterial.iconDefinitions,
       ...eclipse.iconDefinitions,
     },
     fileNames: {
-      ...updatedCatppuccin.fileNames,
+      ...updatedMaterial.fileNames,
       ...eclipse.fileNames,
     },
     fileExtensions: {
-      ...updatedCatppuccin.fileExtensions,
+      ...updatedMaterial.fileExtensions,
       ...eclipse.fileExtensions,
     },
     folderNames: {
-      ...updatedCatppuccin.folderNames,
+      ...updatedMaterial.folderNames,
       ...eclipse.folderNames,
     },
     folderNamesExpanded: {
-      ...updatedCatppuccin.folderNamesExpanded,
+      ...updatedMaterial.folderNamesExpanded,
       ...eclipse.folderNamesExpanded,
     },
   };
@@ -94,17 +94,13 @@ try {
     JSON.stringify(merged, null, 2)
   );
 
-  console.log("✅ Successfully merged Catppuccin + Eclipse icons!");
+  console.log("✅ Successfully merged Material Icon Theme + Eclipse icons!");
   console.log(
-    `   - ${Object.keys(merged.iconDefinitions).length} icon definitions`
+    "   - " + Object.keys(merged.iconDefinitions).length + " icon definitions"
   );
-  console.log(`   - Icons from Catppuccin: icons-catppuccin/`);
-  console.log(`   - Icons from Eclipse: icons/`);
-
-  console.log(
-    `   Total icon definitions: ${Object.keys(merged.iconDefinitions).length}`
-  );
+  console.log("   - Icons from Material: icons-material/");
+  console.log("   - Icons from Eclipse: icons/");
 } catch (error) {
-  console.error("❌ Error merging themes:", error.message);
+  console.error("❌ Error:", error.message);
   process.exit(1);
 }
