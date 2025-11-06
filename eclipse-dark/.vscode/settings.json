@@ -1,0 +1,82 @@
+{
+  "editor.tokenColorCustomizations": {
+    "[Eclipse Dark Pro]": {
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "foreground": "#7582ba",
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    },
+    "[Eclipse Dark Flat]": {
+      "textMateRules": [
+        {
+          "scope": "comment",
+          "settings": {
+            "foreground": "#7a85b8",
+            "fontStyle": "italic"
+          }
+        }
+      ]
+    }
+  },
+  "better-comments.tags": [
+    {
+      "tag": "TODO:",
+      "color": "#82aaff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "FIXME:",
+      "color": "#ffa657",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "HACK:",
+      "color": "#c792ea",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "NOTE:",
+      "color": "#4ec9b0",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "IMPORTANT:",
+      "color": "#4ec9b0",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "BUG:",
+      "color": "#f07178",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    }
+  ]
+}
