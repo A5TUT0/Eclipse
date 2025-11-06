@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#FFA657" opacity="0.2"/>
-  <path d="M13 2v7h7" fill="#FFA657" opacity="0.1"/>
-  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-7-7z" stroke="#FFA657" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8 13.5c0 1 .5 1.5 1.5 1.5s1.5-.5 1.5-1.5v-2c0-.5-.2-1-1-1" stroke="#FFA657" stroke-width="1" fill="none"/>
-  <path d="M13 12.5c0 1 .5 1.5 1.5 1.5s1.5-1 1.5-2" stroke="#FFA657" stroke-width="1" fill="none"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 -960 960 960"><path fill="#f9a825" d="M560-160v-80h120q17 0 28.5-11.5T720-280v-80q0-38 22-69t58-44v-14q-36-13-58-44t-22-69v-80q0-17-11.5-28.5T680-720H560v-80h120q50 0 85 35t35 85v80q0 17 11.5 28.5T840-560h40v160h-40q-17 0-28.5 11.5T800-360v80q0 50-35 85t-85 35zm-280 0q-50 0-85-35t-35-85v-80q0-17-11.5-28.5T120-400H80v-160h40q17 0 28.5-11.5T160-600v-80q0-50 35-85t85-35h120v80H280q-17 0-28.5 11.5T240-680v80q0 38-22 69t-58 44v14q36 13 58 44t22 69v80q0 17 11.5 28.5T280-240h120v80z"/></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" fill="#61DAFB" opacity="0.35"/>
+  <path d="M13 2v7h7" fill="#FF79C6" opacity="0.2"/>
+  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-7-7z" stroke="#61DAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- React atom symbol -->
+  <ellipse cx="12" cy="13" rx="4.5" ry="1.8" stroke="#61DAFB" stroke-width="1" fill="none"/>
+  <ellipse cx="12" cy="13" rx="4.5" ry="1.8" stroke="#61DAFB" stroke-width="1" fill="none" transform="rotate(60 12 13)"/>
+  <ellipse cx="12" cy="13" rx="4.5" ry="1.8" stroke="#61DAFB" stroke-width="1" fill="none" transform="rotate(-60 12 13)"/>
+  <circle cx="12" cy="13" r="1" fill="#61DAFB"/>
+  
+  <text x="12" y="19" font-family="Arial, sans-serif" font-size="3.5" font-weight="bold" fill="#FF79C6" text-anchor="middle">APP</text>
+</svg>

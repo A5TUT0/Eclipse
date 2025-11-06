@@ -9,3 +9,7 @@
 **/*.log
 test/**
 *.vsix
+merge-icons.js
+iconTheme-custom.json
+merge-icons.js
+iconTheme-custom.json

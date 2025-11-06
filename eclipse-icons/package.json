@@ -1,8 +1,8 @@
 {
   "name": "eclipse-icons",
   "displayName": "Eclipse Icons",
-  "description": "A beautiful icon theme for VS Code with modern, vibrant icons for files and folders",
-  "version": "0.0.1",
+  "description": "Eclipse-themed icon customizations built on top of Catppuccin Icons",
+  "version": "0.0.5",
   "publisher": "NoahLezama",
   "engines": {
     "vscode": "^1.105.0"
@@ -16,8 +16,11 @@
     "file icons",
     "folder icons",
     "eclipse",
-    "material icons",
+    "catppuccin",
     "theme"
+  ],
+  "extensionDependencies": [
+    "Catppuccin.catppuccin-vsc-icons"
   ],
   "repository": {
     "type": "git",
@@ -36,7 +39,8 @@
     ]
   },
   "scripts": {
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "build": "node merge-icons.js",
+    "package": "npm run build && vsce package",
+    "publish": "npm run build && vsce publish"
   }
 }

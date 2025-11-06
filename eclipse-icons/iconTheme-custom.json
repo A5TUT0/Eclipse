@@ -1,0 +1,43 @@
+{
+  "iconDefinitions": {
+    "_react_component": {
+      "iconPath": "./icons/file/react-component.svg"
+    },
+    "_main": {
+      "iconPath": "./icons/file/main.svg"
+    },
+    "_app": {
+      "iconPath": "./icons/file/app.svg"
+    },
+    "_folder_components": {
+      "iconPath": "./icons/folder/folder-components.svg"
+    },
+    "_folder_components_open": {
+      "iconPath": "./icons/folder/folder-components-open.svg"
+    }
+  },
+  "fileNames": {
+    "main.js": "_main",
+    "main.jsx": "_main",
+    "main.tsx": "_main",
+    "index.js": "_main",
+    "index.jsx": "_main",
+    "index.tsx": "_main",
+    "App.js": "_app",
+    "App.jsx": "_app",
+    "App.tsx": "_app"
+  },
+  "fileExtensions": {
+    "component.jsx": "_react_component",
+    "component.tsx": "_react_component"
+  },
+  "folderNames": {
+    "components": "_folder_components",
+    "Components": "_folder_components"
+  },
+  "folderNamesExpanded": {
+    "components": "_folder_components_open",
+    "Components": "_folder_components_open"
+  },
+  "hidesExplorerArrows": false
+}
