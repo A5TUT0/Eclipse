@@ -2,7 +2,7 @@
   "name": "eclipse-dark",
   "displayName": "Eclipse Dark",
   "description": "A beautiful dark theme with vibrant colors, excellent contrast, and distinct parameter highlighting. Includes Better Comments for enhanced TODO/FIXME tags!",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "publisher": "NoahLezama",
   "icon": "icon.png",
   "galleryBanner": {
@@ -51,6 +51,26 @@
         "label": "Eclipse Dark Flat",
         "uiTheme": "vs-dark",
         "path": "./themes/Eclipse-flat-color-theme.json"
+      },
+      {
+        "label": "Eclipse Umbra",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Eclipse-Umbra-color-theme.json"
+      },
+      {
+        "label": "Eclipse Flare",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Eclipse-Flare-color-theme.json"
+      },
+      {
+        "label": "Eclipse Penumbra",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Eclipse-Penumbra-color-theme.json"
+      },
+      {
+        "label": "Eclipse Optics",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Eclipse-Optics-color-theme.json"
       }
     ]
   },

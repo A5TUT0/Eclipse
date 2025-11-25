@@ -10,4 +10,5 @@ vsc-extension-quickstart.md
 .vscode/settings.json
 **/.DS_Store
 **/*.log
+mejoras.txt
 test/**

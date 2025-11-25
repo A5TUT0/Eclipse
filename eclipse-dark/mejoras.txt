@@ -1,0 +1,70 @@
+# Propuestas de Mejora para el Proyecto de Temas de Eclipse
+
+Este archivo contiene una lista de sugerencias para mejorar la calidad, mantenibilidad y facilidad de uso del proyecto de temas de VS Code.
+
+## 1. Gestión de Dependencias
+
+**Problema:** La herramienta `vsce` (Visual Studio Code Extensions) se usa para empaquetar y publicar la extensión, pero no está listada como una dependencia del proyecto en `package.json`. Esto requiere que cada colaborador la instale globalmente, lo que puede llevar a inconsistencias de versiones.
+
+**Solución:** Añadir `vsce` y otras herramientas de desarrollo como dependencias de desarrollo.
+
+```bash
+pnpm add -D vsce
+```
+
+Esto asegurará que todos los desarrolladores usen la misma versión de las herramientas y simplificará la configuración inicial del proyecto.
+
+## 2. Automatización de la Creación de Temas
+
+**Problema:** Actualmente, los archivos de temas (ej. `Eclipse-Umbra-color-theme.json`, `Eclipse-Flare-color-theme.json`) tienen una estructura muy similar y solo varían en los valores de los colores. Mantenerlos por separado implica una gran duplicación de código. Si se necesita añadir una nueva regla de coloreado, habría que aplicarla manualmente en todos los archivos.
+
+**Solución:** Crear un sistema de plantillas para generar los temas automáticamente.
+1.  **Crear una Plantilla Base:** Un archivo `template.json` que contenga la estructura del tema con placeholders para los colores (ej. `__PRIMARY_COLOR__`, `__TEXT_COLOR__`).
+2.  **Definir Paletas de Colores:** Archivos JSON separados para cada "personalidad" (ej. `palettes/umbra.json`, `palettes/flare.json`) que definan los valores de los colores.
+3.  **Crear un Script de Build:** Un script (en Node.js o similar) que lea la plantilla, la combine con cada paleta de colores y genere los archivos de tema finales en la carpeta `themes/`.
+
+**Beneficios:**
+*   **Menos duplicación:** Se elimina el código repetido.
+*   **Mantenimiento Sencillo:** Para añadir o cambiar una regla de sintaxis, solo se modifica la plantilla una vez.
+*   **Fácil de Expandir:** Añadir un nuevo tema es tan simple como crear un nuevo archivo de paleta de colores.
+
+## 3. Actualización de la Documentación
+
+**Problema:** El archivo `README.md` no refleja los nuevos temas que se han creado. Los usuarios no sabrán de su existencia ni cómo se ven.
+
+**Solución:** Actualizar el `README.md` para incluir:
+*   Una sección para cada uno de los nuevos temas (`Eclipse Umbra`, `Eclipse Flare`, `Eclipse Penumbra`, `Eclipse Optics`).
+*   **Screenshots** de alta calidad para cada tema que muestren cómo se ve el código.
+*   Una breve descripción de la "personalidad" o el enfoque de cada tema.
+
+## 4. Registro de Cambios (Changelog)
+
+**Problema:** El archivo `CHANGELOG.md` no ha sido actualizado para reflejar la creación de los 4 nuevos temas.
+
+**Solución:** Añadir una nueva entrada en `CHANGELOG.md` para la versión actual (`0.0.7` o la que corresponda) que liste las novedades, como:
+*   `ADDED: Nuevo tema "Eclipse Umbra"`
+*   `ADDED: Nuevo tema "Eclipse Flare"`
+*   `ADDED: Nuevo tema "Eclipse Penumbra"`
+*   `ADDED: Nuevo tema "Eclipse Optics"`
+
+## 5. Linting y Formateo de Código
+
+**Problema:** No hay herramientas configuradas para asegurar que los archivos JSON de los temas tengan un formato consistente y estén libres de errores de sintaxis.
+
+**Solución:** Integrar herramientas como `prettier` para el formateo y un linter de JSON.
+1.  Añadir `prettier` como dependencia de desarrollo.
+2.  Crear un script en `package.json` para formatear los archivos:
+    ```json
+    "scripts": {
+      "format": "prettier --write \"**/*.json\""
+    }
+    ```
+Esto ayuda a mantener el código limpio y legible, especialmente si varias personas contribuyen al proyecto.
+
+## 6. Accesibilidad y Contraste de Color
+
+**Sugerencia:** Realizar una revisión manual del contraste de colores en todos los temas para asegurar que cumplen con las guías de accesibilidad (WCAG AA como mínimo). Un buen contraste es crucial para personas con discapacidades visuales. Herramientas online pueden ayudar a verificar pares de colores (texto sobre fondo).
+
+## 7. Completitud de los Temas
+
+**Sugerencia:** Visual Studio Code añade continuamente nuevas propiedades de color que se pueden personalizar en los temas. Se recomienda revisar periódicamente la [documentación oficial de colores de temas de VS Code](https://code.visualstudio.com/api/references/theme-color) para incorporar nuevas personalizaciones y mantener los temas actualizados.
